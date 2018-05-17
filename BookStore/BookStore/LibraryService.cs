@@ -12,25 +12,40 @@ namespace BookStore
     {
         private static List<Book> bookList = new List<Book>()
         {
-            new Book(new DateTime(2018,5,1,8,30,52), new DateTime(2018,5,2,8,30,52), "Pan Tadeusz", new Status(1, true)),
-            new Book(new DateTime(2018,1,1,8,30,52), new DateTime(2018,1,12,9,30,52), "Lalka", new Status(2, true)),
-            new Book("Dziady"),
+            new Book("Pan Tadeusz"), new Book("Dziady"), new Book("Lalka")
 
 
         };
+
+        public LibraryService()
+        {
+            bookList.ElementAt(0).Borrowed = true;
+            bookList.ElementAt(1).Borrowed = true;
+
+
+            borrowedBookList.Add(new BookInfo(bookList.ElementAt(0), new DateTime(2018, 5, 1, 8, 30, 52), new DateTime(2018, 5, 2, 8, 30, 52), 1));
+
+            borrowedBookList.Add(new BookInfo(bookList.ElementAt(1), new DateTime(2018, 1, 1, 8, 30, 52), new DateTime(2018, 1, 12, 9, 30, 52), 2));
+        }
+
+        private static List<BookInfo> borrowedBookList = new List<BookInfo>()
+        {
+            
+        };
+           
 
         private static List<int> userIdList = new List<int>()
         {1, 2};
 
      
-        Status ILibraryService.borrowBook(int bookID)
+        Boolean ILibraryService.borrowBook(int bookID)
         {
             foreach (Book book in bookList)
             {
                 if (book.BookID == bookID)
                 {
-                   
-                    return book.Status;
+                    
+                    return book.Borrowed;
                 }
             }
             throw new BookNotFoundException();
@@ -59,17 +74,17 @@ namespace BookStore
             }
             return false;
         }
-        List<Book> ILibraryService.getBorrowedBooks(int userID)
+        List<BookInfo> ILibraryService.getBorrowedBooks(int userID)
         {
             if(!isUserInLibrary(userID))
             {
                 throw new UserNotFoundException();
             }
-            List<Book> userBorrowedBookList = new List<Book>();
+            List<BookInfo> userBorrowedBookList = new List<BookInfo>();
 
-            foreach(Book book in bookList)
+            foreach(BookInfo book in borrowedBookList)
             {
-                if (book.Status.UserID == userID)
+                if (book.UserID == userID)
                 {
                     userBorrowedBookList.Add(book);
                 }
@@ -79,18 +94,8 @@ namespace BookStore
 
         }
 
-        List<Book> ILibraryService.getListOfBorrowedItems()
+        List<BookInfo> ILibraryService.getListOfBorrowedItems()
         {
-            List<Book> borrowedBookList = new List<Book>();
-
-            foreach(Book book in bookList)
-            {
-                if(book.Status.Borrowed)
-                {
-                    borrowedBookList.Add(book);
-                }
-            }
-
             return borrowedBookList;
         }
 

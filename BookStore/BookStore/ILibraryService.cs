@@ -12,16 +12,16 @@ namespace BookStore
     public interface ILibraryService
     {
         [OperationContract]
-        List<Book> getListOfBorrowedItems();
+        List<BookInfo> getListOfBorrowedItems();
 
         [OperationContract]
-        List<Book> getBorrowedBooks(int userID);
+        List<BookInfo> getBorrowedBooks(int userID);
 
         [OperationContract]
         Book getBook(int bookID);
 
         [OperationContract]
-        Status borrowBook(int bookID);
+        Boolean borrowBook(int bookID);
 
        
     }

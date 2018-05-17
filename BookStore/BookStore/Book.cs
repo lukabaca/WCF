@@ -10,14 +10,12 @@ namespace BookStore
     {
         [DataMember]
         private int bookID;
-        [DataMember]
-        private DateTime borrowDate;
-        [DataMember]
-        private DateTime returnDate;
+       
         [DataMember]
         private String title;
+
         [DataMember]
-        private Status status;
+        private Boolean borrowed;
 
         private static int bookIDGenerator = 1;
         public Book()
@@ -29,17 +27,7 @@ namespace BookStore
         {
             this.bookID = bookIDGenerator++;
             this.title = title;
-
-            this.status = new Status(false);
-        }
-
-        public Book(DateTime borrowDate, DateTime returnDate, String title, Status status)
-        {
-            this.bookID = bookIDGenerator++;
-            this.borrowDate = borrowDate;
-            this.returnDate = returnDate;
-            this.title = title;
-            this.status = status;
+            this.borrowed = false;
         }
 
        
@@ -57,31 +45,7 @@ namespace BookStore
         }
 
        
-        public DateTime BorrowDate
-        {
-            get
-            {
-                return borrowDate;
-            }
-
-            set
-            {
-                borrowDate = value;
-            }
-        }
-       
-        public DateTime ReturnDate
-        {
-            get
-            {
-                return returnDate;
-            }
-
-            set
-            {
-                returnDate = value;
-            }
-        }
+        
        
         public string Title
         {
@@ -95,20 +59,19 @@ namespace BookStore
                 title = value;
             }
         }
-        
-        public Status Status
+
+        public Boolean Borrowed
         {
             get
             {
-                return status;
+                return borrowed;
             }
 
             set
             {
-                status = value;
+                borrowed = value;
             }
         }
-
 
     }
 }

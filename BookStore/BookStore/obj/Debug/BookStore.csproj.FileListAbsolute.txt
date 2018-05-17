@@ -4,3 +4,9 @@ D:\Studia\VI semestr\Rozproszone Systemy Obiektowe\WCF\BookStore\BookStore\bin\D
 D:\Studia\VI semestr\Rozproszone Systemy Obiektowe\WCF\BookStore\BookStore\obj\Debug\BookStore.csprojResolveAssemblyReference.cache
 D:\Studia\VI semestr\Rozproszone Systemy Obiektowe\WCF\BookStore\BookStore\obj\Debug\BookStore.dll
 D:\Studia\VI semestr\Rozproszone Systemy Obiektowe\WCF\BookStore\BookStore\obj\Debug\BookStore.pdb
+D:\Studia\VIsemestr\Rozproszone Systemy Obiektowe\WCF\WCF\BookStore\BookStore\obj\Debug\BookStore.csprojResolveAssemblyReference.cache
+D:\Studia\VIsemestr\Rozproszone Systemy Obiektowe\WCF\WCF\BookStore\BookStore\obj\Debug\BookStore.dll
+D:\Studia\VIsemestr\Rozproszone Systemy Obiektowe\WCF\WCF\BookStore\BookStore\obj\Debug\BookStore.pdb
+D:\Studia\VIsemestr\Rozproszone Systemy Obiektowe\WCF\WCF\BookStore\BookStore\bin\Debug\BookStore.dll.config
+D:\Studia\VIsemestr\Rozproszone Systemy Obiektowe\WCF\WCF\BookStore\BookStore\bin\Debug\BookStore.dll
+D:\Studia\VIsemestr\Rozproszone Systemy Obiektowe\WCF\WCF\BookStore\BookStore\bin\Debug\BookStore.pdb
