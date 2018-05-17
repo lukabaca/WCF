@@ -14,20 +14,28 @@ namespace BookStore
         [DataMember]
         private String title;
 
+
         [DataMember]
-        private Boolean borrowed;
+        private Status status;
 
         private static int bookIDGenerator = 1;
         public Book()
         {
-
+            this.bookID = bookIDGenerator++;
         }
 
         public Book(String title)
         {
             this.bookID = bookIDGenerator++;
             this.title = title;
-            this.borrowed = false;
+            this.status = new Status();
+        }
+
+        public Book(String title, Status status)
+        {
+            this.bookID = bookIDGenerator++;
+            this.title = title;
+            this.status = status;
         }
 
        
@@ -60,16 +68,16 @@ namespace BookStore
             }
         }
 
-        public Boolean Borrowed
+        public Status Status
         {
             get
             {
-                return borrowed;
+                return status;
             }
 
             set
             {
-                borrowed = value;
+                status = value;
             }
         }
 

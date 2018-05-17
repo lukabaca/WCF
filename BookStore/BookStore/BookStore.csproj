@@ -51,6 +51,7 @@
     <Compile Include="ILibraryService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="LibraryService.cs" />
+    <Compile Include="Status.cs" />
     <Compile Include="UserNotFoundException.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -19,20 +19,18 @@ namespace BookStore
         [DataMember]
         private DateTime returnDate;
 
-        [DataMember]
-        private int userID;
 
         public BookInfo()
         {
 
         }
 
-        public BookInfo(Book book, DateTime borrowDate, DateTime returnDate, int userId)
+        public BookInfo(Book book, DateTime borrowDate, DateTime returnDate)
         {
             this.book = book;
             this.borrowDate = borrowDate;
             this.returnDate = returnDate;
-            this.userID = userId;
+            
         }
 
         public Book Book
@@ -74,18 +72,7 @@ namespace BookStore
             }
         }
 
-        public int UserID
-        {
-            get
-            {
-                return userID;
-            }
-
-            set
-            {
-                userID = value;
-            }
-        }
+       
 
     }
 }

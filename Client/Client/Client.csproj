@@ -61,7 +61,7 @@
     <None Include="Service References\ServiceReference\Client.ServiceReference.Book.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\ServiceReference\Client.ServiceReference.Status.datasource">
+    <None Include="Service References\ServiceReference\Client.ServiceReference.BookInfo.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Service References\ServiceReference\service.wsdl" />

@@ -21,7 +21,7 @@ namespace BookStore
         Book getBook(int bookID);
 
         [OperationContract]
-        Boolean borrowBook(int bookID);
+        Boolean borrowBook(int bookID, int userID);
 
        
     }
